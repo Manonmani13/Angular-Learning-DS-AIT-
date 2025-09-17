@@ -1,0 +1,22 @@
+Hi
+<div *ngIf="true">
+  welcome
+</div>
+{{flag}}
+<input type="button" value="{{flag==true?'Hide':'Show'}}" (click)="flag!=flag"/>
+<br/>
+<img src="../../../databinding2/src/assets/mango.jpeg" alt="Mango image"  width="100px"/>
+<input type="button" value="Registeration" (click)="flag2=true"/>
+<input type="button" value="Login" (click)="flag2=false"/>
+<br/>
+<div *ngIf="flag2"><h1>Registeration</h1></div>
+<div *ngIf="!flag2"><h1>Login</h1></div>
+<li *ngFor="let item of arr">{{item}}</li>  
+<select>
+  <option *ngFor="let c of cities">{{c}}</option>
+</select placeholder="Select City">
+<ng-container></ng-container>
+
+<input type="text" [(ngModel)]="txtCity">
+<input type ="button" value="Add Item" (click)="cities.push(txtCity)"/>
+{{txtCity}}
