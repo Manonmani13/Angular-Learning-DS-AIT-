@@ -1,0 +1,11 @@
+
+Hi all
+<h1>{{sno}}</h1>
+<input type="button" value="{{sno}}">//one way of binding
+<input type="button" [value]="sno">//second way of binding
+<input type="button" value="Click" (click)="fun1()">//event binding
+
+<br>
+<input type="button" [ngModel]="sno">
+<br/>
+<input type="button" [(ngModel)]="sno">/
