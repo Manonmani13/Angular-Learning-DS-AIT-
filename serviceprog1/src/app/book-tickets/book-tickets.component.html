@@ -1,0 +1,6 @@
+<div style="border:1px solid black; padding:10px; margin:10px;">
+<p>Book Tickets Wizard </p>
+<h2 *ngIf="ser.TotalTickets==0">No Tickets Available</h2>
+<input  *ngIf="ser.TotalTickets!=0 "type="button" value="Book 10 Tickets" (click)="bookTickets()">
+
+</div>
