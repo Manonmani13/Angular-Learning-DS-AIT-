@@ -1,0 +1,36 @@
+<select [(ngModel)]="fruit">
+  <option value="" *ngIf="fruit==''">Select Fruit</option>
+  <option value="a">Apple</option>
+    <option value="o">Mango</option>
+    <option value="b">Banana</option>
+</select>
+{{fruit}}
+<div [ngSwitch]="fruit">
+  <div *ngSwitchCase="'a'">
+    <h1>Apple Rs:100/-Kg</h1>
+  </div>
+  <div *ngSwitchCase="'o'">
+    <h1>Mango Rs:200/-Kg</h1>
+  </div>
+  <div *ngSwitchCase="'b'">
+    <h1>banana Rs:60/-Kg</h1>
+  </div>
+  <div *ngSwitchDefault>
+    <h1>Please select a fruit</h1>
+  </div>
+</div>
+<div [ngStyle]="{color:'dropCollection','font-size.px':30}">
+  Style Binding
+</div>
+<div style="color:{{dropCollection}};font-size:30px">
+  Style Binding2
+<select [(ngModel)]="dropCollection">
+  <option>Red</option>
+  <option>Green</option>
+  <option>Blue</option>
+</select>
+<br>
+
+<div [ngClass]="clsName" (mouseover)="clsName='xyz'" (mouseout)="clsName='abc'"> 
+  welcome
+</div>
