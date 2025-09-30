@@ -1,0 +1,18 @@
+<form>
+  <input type="text" [(ngModel)]="t1"  #txt1="ngModel" name="un" required/>
+  <div *ngIf="txt1.touched && txt1.invalid" class="err">
+    Enter UserName
+  </div>
+  <br/>
+  <br/>
+    <input type="text" [(ngModel)]="t2"  #txt2="ngModel" name="pwd" required 
+    minlength="5" maxlength="10"/>
+  <div *ngIf="txt2.errors && txt2.touched && txt2.errors['required']" class="err">
+    Enter Password
+  </div>
+ <div *ngIf="txt2.errors && txt2.errors['minlength'] && txt2.touched" class="err">
+  Enter Characters between 5 & 8
+</div>
+
+  <input type="button"value="send"[disabled]="txt1.invalid ||txt2.invalid"/>
+</form>
