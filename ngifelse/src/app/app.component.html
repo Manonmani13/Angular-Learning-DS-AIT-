@@ -1,0 +1,17 @@
+Hi
+
+<h2 *ngIf="x>y ; else ydiv">X is Big</h2>
+<ng-template #ydiv>
+<h2>Y is Big</h2>
+
+</ng-template>
+
+-----------------------
+<li *ngIf="x>y &&x>z; else ybig">X is Big</li>
+<ng-template #ybig>
+  <li *ngIf="y>z else ztemp">Y is Big </li> 
+</ng-template>
+<ng-template #ztemp>
+  <li>Z is Big</li>
+</ng-template>
+
