@@ -1,0 +1,14 @@
+<form [formGroup]="obj.frm1">
+  <input type="text"formControlName="cnt1"/>
+  <br/>
+  <span *ngIf="obj.frm1.controls.cnt1.errors && obj.frm1.controls.cnt1.errors['required']">
+Enter Username
+  </span>
+    <span *ngIf="obj.frm1.controls.cnt1.errors && obj.frm1.controls.cnt1.errors['minlength']">User name should >5 characters </span>
+<br/>
+<input type="text" formControlName="cn2">
+<span *ngIf="obj.frm1.controls.cnt2.errors && 
+obj.frm1.controls.cnt2">Enter Password</span>
+<span *ngIf="obj.frm1.controls.cnt2.errors && obj.frm1.controls.cnt2.errors['pattern']">Enter Valid Pattern </span>
+<input type="button" value="submit" (click)="funSubmit()" [disabled]="obj.frm1.invalid"/>
+</form>
