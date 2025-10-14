@@ -1,0 +1,22 @@
+Hi
+<br/> 
+{{uname}}
+<input type="text"placeholder="Name"#unamecon/>
+
+<br/>
+<input type="button" value="Change Name" (click)="funChange(unamecon.value)"/>
+<br/>
+{{cities}}
+<br/>
+{{cities|cityarraypipe}}
+<br/>
+<input type="text"placeholder="city "#cname/>
+
+<br/>
+<input type="button" value="Add city" (click)="cityAdd(cname.value)"/>
+<br/>
+<select >
+  <option *ngFor="let c of cities">
+    {{c}}
+  </option>
+</select>
