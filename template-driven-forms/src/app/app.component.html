@@ -1,0 +1,17 @@
+<form action="" name="frm1" #frm1>
+  <input type="text" [(ngModel)]="txt1" required name="txtname" #t1="ngModel"/>
+  <br/>
+  Touched -{{t1.touched}}
+  <br/>
+   UnTouched- {{t1.untouched}}
+  <br/>
+  Valid -  {{t1.valid  }}
+  <br/>
+    Invalid -{{t1.invalid}}
+  <br/>
+   Dirty - {{t1.dirty}}
+  <br/>
+  Pristine -  {{t1.pristine}}
+  <br/>
+  <input type="submit" value="Click"/>
+</form>
