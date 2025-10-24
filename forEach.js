@@ -1,0 +1,5 @@
+"use strict";
+var arr = [1, 2, 3];
+arr.forEach(function (value) {
+    alert(value);
+});
