@@ -1,0 +1,15 @@
+<input type="button" value="Click" (click)="getData()"/>
+<table border="1">
+  <thead>
+    <th>Country Name</th>
+    <th>Population</th>
+    <th>Region</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let oneCon of con_data">
+  <td>{{ oneCon.name.common }}</td>
+  <td>{{ oneCon.population }}</td>
+  <td>{{ oneCon.region }}</td>
+</tr>
+  </tbody>
+</table>
