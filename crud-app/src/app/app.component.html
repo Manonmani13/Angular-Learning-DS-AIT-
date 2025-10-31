@@ -1,0 +1,33 @@
+<!-- Hi
+<input type="button" value="Get Data" (click)="funGetData()"/>
+
+{{table_data|json}} -->
+
+<div class="container">
+  <br/>
+  <input type="text" placeholder="Username" class="form-control" [(ngModel)]="txtName"/>
+  <br/>
+  <input type="text" placeholder="City" class="form-control" [(ngModel)]="txtCity"/>
+  <br/>
+  <input type="button" value="{{btnTxt}}" class="btn btn-primary" (click)="funInsert()"/>
+</div>
+<table border="1" class="table table-striped" >
+   <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+    </thead>
+        <tbody>
+
+  <tr *ngFor="let un of table_data">
+      <td>{{un._id}}</td>
+      <td>{{un.uname}}</td>
+      <td>{{un.city}}</td>
+
+      <td><span class="fa fa-trash" (click)="funTrash(un._id)"></span></td>
+      <td><span class="fa fa-edit" (click)="funUpdate(un)"></span></td>
+      
+  </tr>
+      </tbody>
+
+</table>
