@@ -1,0 +1,20 @@
+<h1>{{ sno }}</h1>
+<img src="blue.jpeg" alt="Blue image" />
+<br />
+<input type="button" value=" Prev " (click)="funPrev()"/>
+<input type="button" value=" Next " (click)="funNext()"/>
+<br/>
+<input type="radio" value="m" name="gen" [(ngModel)]="gender"/>Male
+<input type="radio" value="f" name="gen"[(ngModel)]="gender"/>Female
+<br/>
+{{gender}}
+<input type="checkbox" [(ngModel)]="chk"/>Accept Terms & Conditions
+{{chk}}
+<select [(ngModel)]="city">
+    <option>Chennai</option>
+    <option>Banglore</option>
+    <option>Hyderabad</option>
+    <option>Delhi</option>
+</select> 
+{{city}}
+<input type="button" value="Register" (click)="funRegister()" />
