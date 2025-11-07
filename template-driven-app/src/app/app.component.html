@@ -1,0 +1,22 @@
+<form #frm1="ngForm">
+  {{rad1}}
+  <input type="radio" name="gen"  
+  [(ngModel)]="rad1" #radref="ngModel" value="m" required >Male
+  <input type="radio" name="gen" [(ngModel)]="rad1" 
+  #radref="ngModel" value="f" required>Female
+  <span>
+    Select Gender
+  </span>
+  <br/>
+  <input type="checkbox" #tcref="ngModel" name="tc" [(ngModel)]="tc" required>Terms & Conditions
+  <div *ngIf="tcref.invalid" style="font-size:10px;color:red">Check Terms and Contains</div>
+<br/>
+<select name="lang" [(ngModel)]="drplang" #drp1="ngModel" required="">
+  <option value="">Languages..</option>
+  <option>Angular</option>
+  <option>React</option>
+  <option>VueJs</option>
+</select>
+<span *ngIf="drp1.invalid">Select a Language</span>
+<input type="button" value="Send" (click)="funSend(frm1)"/>
+</form>
