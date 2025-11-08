@@ -1,0 +1,14 @@
+<p>more-info works!</p>
+
+<div class="container">
+    <div *ngFor="let pro of proinf">
+        <div *ngIf="pro.pid==product_id" style="display: flex;">
+            <div>
+                <img src="../../assets/mobile.jpeg" alt="mobile" width="300px" height="300px">
+            </div>
+            <div>
+            <h1>{{pro.pname}}</h1>
+            <input type="button" class="btn btn-primary" value="Back" routerLink="../../card"> 
+        </div>
+    </div>
+</div>

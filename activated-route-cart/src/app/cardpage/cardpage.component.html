@@ -1,0 +1,12 @@
+<p>cardpage works!</p>
+<!-- {{dataObj|json}} -->
+ <div class="container">
+    <h2>Products</h2>
+    </div>
+<div style="display: flex;" class="container">
+  <div *ngFor="let item of dataObj" class="card" style="padding:10px; margin-right: 20px;">
+    <h1>{{ item.pname }}</h1>
+<img src="../../assets/mobile.jpeg" alt="mobile" width="200px" height="200px">
+<input type="button" class="btn btn-danger"  style="margin-top:10px" 
+value="More Info" [routerLink]="['more',item.pid]">
+  </div>
