@@ -1,0 +1,12 @@
+<script>
+    function fun1(e){
+        if(e.keyCode<48 || e.keyCode>57){
+            alert("Invalid value")
+        }
+        e.preventDefault();
+    }
+
+</script>
+<body>
+    <input type="text" onkeydown="fun1(event)"/>
+</body>

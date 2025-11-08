@@ -1,0 +1,16 @@
+<script>
+    class cl3{
+        sno=10;
+        fun1(){
+            alert(this.sno);
+            let funinner=()=>{
+                alert("From inner function");
+                alert(this.sno);
+            }
+            funinner()
+
+        }
+    }
+    var ob=new cl3();
+    ob.fun1();
+</script>

@@ -1,0 +1,18 @@
+<script>
+    var obj={
+        uname:"mano",
+        city:"hyd",
+        fun1:function(x,y){
+            alert(this.uname)
+            alert(this.city)
+            alert(x)
+            alert(y)
+        }
+    }
+    var newobj={
+        uname:"amith",
+        city:"chennai"
+    }
+    var rv=obj.fun1.bind(newobj,10,20)
+    rv(); 
+</script>

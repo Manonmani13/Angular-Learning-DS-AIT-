@@ -1,0 +1,14 @@
+<script>
+    function fun1(ref){
+        alert("fun1 exec ....")
+        ref();
+    }
+    function fun2(){
+        alert("fun2 exec...")
+    }
+    function fun3(){
+        alert("fun3 exec...")
+    }
+    fun1(fun2);
+    fun3(fun3)
+</script>

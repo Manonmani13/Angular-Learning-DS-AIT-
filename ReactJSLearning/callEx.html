@@ -1,0 +1,17 @@
+<script>
+    var obj={
+        uname:"mano",
+        city:"chennai",
+        fun1: function(x,y){
+            alert(this.uname);
+            alert(this.city)
+            alert(x)
+            alert(y);
+        }
+    }
+    var newobj={
+        uname:"navee",
+        city:"chennai"
+    }
+    obj.fun1.call(newobj,10,20)
+</script>

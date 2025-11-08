@@ -1,0 +1,14 @@
+<script>
+    function fun1(){
+        var dt=new Date();
+       document.getElementById("div1").innerText=dt.getHours()+":"+dt.getMinutes()+":"+dt.getSeconds()
+}
+var t=setInterval("fun1()",1000)
+function funStop(){
+clearInterval(t)
+}
+</script>
+<body>
+    <div id="div1">Hi</div>
+    <input type="button" value="Stop" onclick="funStop()"/>
+</body>

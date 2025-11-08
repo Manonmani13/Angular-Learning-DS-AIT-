@@ -1,0 +1,22 @@
+<script>
+    function fun1(){
+ var x=10;
+ var y=20;
+    alert("from outer")
+    return function fun2(){
+        alert("From inner")
+        alert(x)
+        alert(y)
+        return function fun3(){
+            alert("From fun3")
+        }
+    }
+    }
+    var rv=fun1();
+
+   console.dir(rv)
+   alert(rv)
+</script>
+<body>
+    <input type="button" value="Click" onclick="rv()"/>
+</body>

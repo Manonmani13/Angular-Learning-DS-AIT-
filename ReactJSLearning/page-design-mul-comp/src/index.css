@@ -1,0 +1,17 @@
+.headerStyles{
+  height: 100px;
+  background-color: cadetblue;
+}
+.leftStyles{
+    height: 100px;
+  background-color: bisque;
+  width: 100px;
+}
+.contentStyles{
+ height: 100px;
+  background-color: aquamarine;
+}
+.footerStyles{
+ height: 200px;
+  background-color: gray;
+}

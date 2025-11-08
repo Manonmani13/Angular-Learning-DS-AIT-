@@ -1,0 +1,16 @@
+<script>
+    var x=(localStorage.getItem("sno"));
+    function fun2(){
+        document.getElementById("div1").innerHTML=x;
+    }
+ function fun3(){
+        document.setItem("sno","123")
+    }
+</script>
+<body onload="fun2()">
+    <p>
+        This is p2
+    </p>
+    <div id="div1"></div>
+    <input type="button" value="Click" onclick="fun3()"/>
+</body>

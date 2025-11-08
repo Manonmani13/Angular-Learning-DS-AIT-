@@ -1,0 +1,16 @@
+<script>
+    function fun1(){
+        alert("Fun1 exec..")
+        document.getElementById("but1").onclick=fun2.bind({},10,20) 
+    }
+    function fun2(x,y){
+        alert("Fun2 exec...")
+        alert(x+y)
+        }
+
+</script>
+<body>
+    <img src="mango.jpeg" width="200px" onclick="fun1()"/>
+    <br/>
+    <input type="button" value="Click" id="but1"/>
+</body>

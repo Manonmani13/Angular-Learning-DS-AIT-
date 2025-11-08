@@ -1,0 +1,32 @@
+<body>
+    <div id="container" class="div1">
+        <img src="mango.jpeg" width="20px" style="float: right; margin-top:10px;
+        margin-right:10px" id="imgClose" />
+    </div>
+
+    <script>
+        document.getElementById("container").addEventListener("click", function () {
+            document.getElementById("container").style.left = "-20px";
+        });
+
+        document.getElementById("imgClose").addEventListener("click", function (e) {
+            document.getElementById("container").style.left = "-250px";
+            e.stopPropagation();
+        });
+    </script>
+
+    <!-- Live server injected script goes here -->
+</body>
+
+<style>
+    .div{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        border-radius: 20px;
+        position: absolute;
+        top:150px;
+        left: 250px;
+
+}
+</style>

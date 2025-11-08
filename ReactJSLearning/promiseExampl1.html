@@ -1,0 +1,23 @@
+<script>
+    function fun(no){
+        return new Promise(function(resolve,reject){
+            if(isNaN(no)){
+                return reject("Invalid")
+            }
+            else{
+                no++;
+                return resolve(no);
+            }
+        })
+    }
+    fun(100).then(function(dt){
+        alert(dt);
+        fun('abcd').then(function(dtt){
+            alert(dtt)
+        },function(err){
+            alert(err)
+        })
+    },function(err){
+        alert(err)
+    })
+</script>

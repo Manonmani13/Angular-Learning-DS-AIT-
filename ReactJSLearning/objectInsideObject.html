@@ -1,0 +1,24 @@
+<script>
+    var obj={
+        uname:"mano",
+        wives:[{
+            name:"w1",
+            child:{sons:["s1","s2"]}
+        },
+        {
+            name:"w2",
+            child:{sons:["d1","s2"]}
+        }
+    ]
+    }
+    alert(obj.wives[0].name)
+    alert(obj.wives[0].child.sons[0])
+
+    var obj1=Object.create({
+        uname:"manonmani",
+        city:"chennai"
+    })
+    alert(obj1);
+    alert(obj1.uname)
+    alert(obj1.city)
+</script>

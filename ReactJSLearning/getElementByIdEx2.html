@@ -1,0 +1,23 @@
+<script>
+    function fun1(ch){
+        var txt1=document.getElementById("t1").value;
+        var txt2=document.getElementById("t2").value;
+        if(ch=='a'){
+            document.getElementById("t3").value=parseInt(txt1)+parseInt(txt2);
+        }
+        else if(ch=='s'){
+            document.getElementById("t3").value=parseInt(txt1) -parseInt(txt2);
+        }
+    }
+</script>
+<body>
+    <input type="text" placeholder="No1" id="t1"/>
+    <br/>
+       <input type="text" placeholder="No2" id="t2"/>
+    <br/>
+       <input type="text" placeholder="No3" id="t3"/>
+    <br/>
+    <input type="button" value="+" onclick="fun1('a')"/>
+    <input type="button" value="-" onclick="fun1('a')"/>
+
+</body>
